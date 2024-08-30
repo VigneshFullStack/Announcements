@@ -1,0 +1,80 @@
+.row {
+  margin: 0 !important;
+}
+
+.announcements,
+.upcoming-holidays {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.announcements,
+.announcement-count {
+  border-bottom: 1px solid #00adf0;
+}
+
+.upcoming-holidays {
+  border-bottom: 1px solid #f33;
+}
+
+.widget-header-text {
+  color: #082b45;
+  font-family: Lato, Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.announcement-count,
+.upcoming-holidays-count {
+  padding: 4px 10px;
+  font-family: Lato, Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.announcement-count {
+  background-color: #00adf0;
+}
+
+.upcoming-holidays-count {
+  background-color: #f33;
+}
+
+.announcement-widget-body {
+  background-color: #d0f2ff33;
+}
+
+.upcoming-holidays-widget-body {
+  background-color: #fff9f9;
+}
+
+.announcement-widget-body,
+.upcoming-holidays-widget-body {
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.widget-content-card {
+  background-color: #fff;
+  padding: 12px;
+  font-family: Poppins, Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  text-align: justify;
+
+  p {
+    color: #6b7897;
+    margin: unset;
+  }
+}

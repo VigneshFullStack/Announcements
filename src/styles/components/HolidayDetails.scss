@@ -1,0 +1,60 @@
+.calendarEvent-title {
+    font-family: Lato, Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #082b45;
+}
+
+.calendarEvent-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 34px;
+    background: #FFFFFF;
+    border: .6px solid rgba(0, 173, 240, .4);
+    border-radius: 8px;
+}
+
+.calendarEvent-container-list {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendarEvent-container-list-name {
+    font-family: Nunito, Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.82px;
+    color: #000;
+}
+
+.calendarEvent-container-list-description {
+    font-family: Nunito, Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .01em;
+    text-align: justify;
+    color: #555;
+}
+
+.calendarEvent-container-list-name-location {
+    font-size: 18px;
+    font-weight: 900;
+    color: #082b45;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 10px;
+}
+
+.calendarEvent-container-list-description {
+    font-family: Nunito, Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .01em;
+    text-align: justify;
+    color: #555;
+}
