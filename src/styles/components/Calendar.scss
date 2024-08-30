@@ -68,7 +68,7 @@
   box-shadow: 0 2.33px 26.76px #ededed;
   background: #ffffff;
   border-radius: 8px;
-  padding: 10px 15px;
+  padding: 10px 15px 15px 15px;
   border: none !important;
 }
 
@@ -123,11 +123,10 @@
 
 .weekday-name,
 [class$="-day"] {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   color: #34485e89 !important;
   text-align: center;
-  line-height: 40px;
 }
 
 .weekday-name {
@@ -148,32 +147,26 @@
 
 .current-day,
 .selectedDate {
-  border: 1px solid var(--primary-color);
+  // border: 1px solid var(--primary-color);
   color: var(--primary-color) !important;
   background-color: rgba(208, 242, 255, 0.2);
   border-radius: var(--border-radius-50-percent);
-  width: 40px;
-  height: 40px;
-  line-height: 38px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
   cursor: pointer;
 }
 
 .holiday {
-  border: 1px solid var(--secondary-color);
   background: #fff9f9;
   color: var(--secondary-color);
   border-radius: var(--border-radius-50-percent);
   cursor: pointer;
   text-align: center;
-  width: 40px;
-  height: 40px;
-  line-height: 38px;
+  width: 50px;
+  height: 50px;
   font-weight: 500;
   font-size: 1rem;
-
-  &hover {
-    border: 1px solid var(--secondary-color);
-  }
 }
 
 .padding-day {
@@ -186,10 +179,8 @@
   border-radius: var(--border-radius-50-percent);
   background-color: rgba(208, 242, 255, 0.2);
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  line-height: 39px;
+  // border: 1px solid var(--primary-color);
   cursor: pointer;
-  box-shadow: inset 0px 0px 0px 1.5px var(#00acf0);
 }
 
 .month-day:focus,
@@ -201,8 +192,8 @@
 
 .month-btn,
 .today {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .calendar-toolbar > [class$="month-btn"]:focus,
@@ -275,7 +266,6 @@
   [class$="-day"] {
     width: 40px;
     height: 40px;
-    line-height: 40px;
   }
 
   .calendar-days > div {
@@ -300,7 +290,6 @@
   [class$="-day"] {
     width: 30px;
     height: 30px;
-    line-height: 30px;
   }
 
   .weekday-name{

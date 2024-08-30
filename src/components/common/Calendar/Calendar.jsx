@@ -65,15 +65,15 @@ const Calendar = () => {
     const holidaysMap = generateHolidaysMap(holidays);
 
     for (let i = 0; i < totalCalendarDay; i++) {
-      let day = i - startWeekDay;
+      let day = i - startWeekDay + 1;
 
-      if (i <= startWeekDay) {
+      if (i < startWeekDay) {
         daysArray.push(
-          <div key={i} className="padding-day">
-            {prevLastDay - startWeekDay + i}
-          </div>
+          <td key={i} className="padding-day">
+            {prevLastDay - startWeekDay + i + 1}
+          </td>
         );
-      } else if (i <= startWeekDay + totalMonthDay) {
+      } else if (i < startWeekDay + totalMonthDay) {
         const currentDate = new Date(date.getFullYear(), date.getMonth(), day);
         const currentDateKey = `${currentDate.getFullYear()}-${
           currentDate.getMonth() + 1
@@ -96,19 +96,19 @@ const Calendar = () => {
 
         daysArray.push(
           <Tooltip key={i} title={tooltipTitle} placement="top">
-            <div
+            <td
               className={dayClass}
               onClick={() => handleDateClick(currentDate, isHoliday)}
             >
               {day}
-            </div>
+            </td>
           </Tooltip>
         );
       } else {
         daysArray.push(
-          <div key={i} className="padding-day">
+          <td key={i} className="padding-day">
             {day - totalMonthDay}
-          </div>
+          </td>
         );
       }
     }
@@ -149,6 +149,26 @@ const Calendar = () => {
     setDate(newDate);
     setSelectedDate(newDate);
     setSelectedHoliday(isTodayHoliday || null);
+  };
+
+  const renderWeekdays = () => {
+    return (
+      <tr>
+        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day, index) => (
+          <th key={index} className="weekday-name">
+            {day}
+          </th>
+        ))}
+      </tr>
+    );
+  };
+
+  const renderCalendarRows = () => {
+    const rows = [];
+    for (let i = 0; i < calendarDays.length; i += 7) {
+      rows.push(<tr key={i}>{calendarDays.slice(i, i + 7)}</tr>);
+    }
+    return rows;
   };
 
   return (
@@ -192,18 +212,10 @@ const Calendar = () => {
               </Tooltip>
             </div>
           </div>
-          <div className="calendar">
-            <div className="weekdays">
-              {["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"].map(
-                (day, index) => (
-                  <div key={index} className="weekday-name">
-                    {day}
-                  </div>
-                )
-              )}
-            </div>
-            <div className="calendar-days">{calendarDays}</div>
-          </div>
+          <table className="calendar">
+            <thead>{renderWeekdays()}</thead>
+            <tbody>{renderCalendarRows()}</tbody>
+          </table>
         </div>
       </div>
       {selectedHoliday && <HolidayDetails holiday={selectedHoliday} />}
